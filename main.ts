@@ -1,7 +1,7 @@
 import { Serie } from "./Serie";
 import { series } from "./data";
 
-const seriesTbody: HTMLElement = document.getElementById('series')!; 
+const seriesTbody: HTMLElement = document.getElementById('coleccion')!; 
 
 function renderSeriesInTable(series: Serie[]): void {
   series.forEach (c  => {

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var data_1 = require("./data");
-var seriesTbody = document.getElementById('series');
+var seriesTbody = document.getElementById('coleccion');
 function renderSeriesInTable(series) {
     series.forEach(function (c) {
         var trElement = document.createElement("tr");
