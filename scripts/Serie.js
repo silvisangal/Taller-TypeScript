@@ -1,4 +1,3 @@
-"use strict";
 var Serie = /** @class */ (function () {
     function Serie(id, name, estudio, rating, description, url, image) {
         this.id = id;
@@ -11,3 +10,4 @@ var Serie = /** @class */ (function () {
     }
     return Serie;
 }());
+export { Serie };
