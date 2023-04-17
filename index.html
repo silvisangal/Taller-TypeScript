@@ -6,71 +6,40 @@
     <title>Tutorial 1</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
-<body>
-    <div class = "container">
-        <h1>TV Series</h1>
+<body >
+    <style>
+        header {
+            background-color: rgb(0, 159, 173);
+            text-align: center;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <header>
         <div class = "row">
-            
+            <img src = "data:image/png;base64,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" width = "80" height="80">
+            <h1>TV Series</h1>
+        </div>
+    </header> 
+    <div class = "container">
+        <div class = "row"> 
             <div class = "col">
-                
-                <img class="img-fluid max-width: 100% height: auto" src="C:\Users\silva\OneDrive\Imágenes\Cratas mapas\Mapa de Cratas (after 2006) 2020-09-01-14-35.png" alt="Avatar">`
-                <table class = "table table-striped">
-                    <thead>
+                <table class = "table table-striped table-hover">
+                    <thead class="thead-light">
                         <tr>
-                            <th>Datos Personales</th>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Channel</th>
+                            <th>Seasons</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Código</td>
-                            <td>10234320</td>
-                        </tr>
-                        <tr>
-                            <td>Cédula</td>
-                            <td>12221122</td>
-                        </tr>
-                        <tr>
-                            <td>Edad</td>
-                            <td>25 Años</td>
-                        </tr>
-                        <tr>
-                            <td>Dirección</td>
-                            <td>Calle falsa 123</td>
-                        </tr>
-                        <tr>
-                            <td>Teléfono</td>
-                            <td>018002500</td>
-                        </tr>
+                    <tbody id = "series">
                     </tbody>    
                 </table>
             </div>
-            <div class = "col" >
-                
-                <table class = "table table-striped">
-                    <caption>Cursos Actuales</caption>
-                        <thead>
-                            <tr>
-                                <th>Curso</th>
-                                <th>Profesor</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Ingeniería de SW</td>
-                                <td>Pablo Picasso</td>
-                            </tr>
-                            <tr>
-                                <td>Futbol I</td>
-                                <td>Juan Piña</td>
-                            </tr>
-                            <tr>
-                                <td>Algoritmos Genéticos</td>
-                                <td>María de la Rosa</td>
-                            </tr>
-                        </tbody>    
-                    </table>
-            </div>
-        </div>
     </div>
+    <script type = "module" src = "./scripts/Serie.js"></script>
+    <scrpt type = "module" src = "./scripts/data.js"></script>
+    <script type = "module" src = "./scripts/main.js"></script>
 </body>
 </html>
